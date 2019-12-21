@@ -148,6 +148,7 @@ function App() {
 								{response.url.longUrl}
 							</a>
 						</div>
+						<hr />
 						<div className="result-item">
 							<span>
 								<strong>Short URL: </strong>
@@ -225,8 +226,8 @@ function App() {
 
 export default App
 
-// console.log('%cHey!', 'color:red;font-family:system-ui;font-size:2rem;font-weight:bold')
-// console.log(
-// 	'%cLike what you see? Follow me at https://github.com/awran5 or visit us at https://gkstyle.net/',
-// 	'color:blue;font-family:system-ui;font-size:13px'
-// )
+console.log('%cHey!', 'color:red;font-family:system-ui;font-size:2rem;font-weight:bold')
+console.log(
+	'%cLike what you see? Follow me at https://github.com/awran5 or visit us at https://gkstyle.net/',
+	'color:blue;font-family:system-ui;font-size:13px'
+)
