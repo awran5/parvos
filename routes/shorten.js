@@ -14,7 +14,7 @@ router.post('/shorten', async (req, res) => {
 			res.json({ url, message: 'URL has already been shortened!' })
 		} else {
 			const urlCode = shortid.generate()
-			const shortUrl = `${process.env.HOST}/${urlCode}`
+			const shortUrl = `${req.headers.host}/${urlCode}`
 			url = new Url({
 				longUrl,
 				shortUrl,
