@@ -6,6 +6,7 @@ const shortid = require('shortid')
 router.use(express.json())
 
 router.post('/shorten', async (req, res) => {
+	const baseURL = req.protocol + '://' + req.get('host')
 	const { longUrl } = req.body
 
 	try {
@@ -14,7 +15,7 @@ router.post('/shorten', async (req, res) => {
 			res.json({ url, message: 'URL has already been shortened!' })
 		} else {
 			const urlCode = shortid.generate()
-			const shortUrl = `${req.headers.host}/${urlCode}`
+			const shortUrl = `${baseURL}/${urlCode}`
 			url = new Url({
 				longUrl,
 				shortUrl,
