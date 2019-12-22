@@ -21,4 +21,4 @@ app.use('/', redirectRoute)
 app.use('/api/url', shortenRoute)
 mongoose.connect(process.env.MONGODB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 
-app.listen(PORT, () => console.log(`server is started at post ${PORT}`))
+app.listen(PORT, () => console.log(`server is started at port ${PORT}`))
